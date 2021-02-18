@@ -1,8 +1,8 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { connectClient } from "./database/mongo";
-import app from "./app";
+import { connectClient } from "./server/database/mongo";
+import app from "./server/app";
 
 console.log("Connecting to mongoDB server...");
 

@@ -1,4 +1,4 @@
-import { port } from "./config";
+import { port } from "../config";
 import router from "./router/routes";
 import express from "express";
 import bodyparser from "body-parser";

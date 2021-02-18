@@ -1,7 +1,7 @@
 /*
  Yes i wasted some seconds organizing the imports.
 */
-import { urlCollection, multiShortURLPerLink, retryIdGen, shortUrlIdLength, bannedIds } from "../config";
+import { urlCollection, multiShortURLPerLink, retryIdGen, shortUrlIdLength, bannedIds } from "../../config";
 import { Router, Response } from "express";
 import validator from "validator";
 import { nanoid } from "nanoid/async";
@@ -13,6 +13,7 @@ router.get("/allurls", async (req, res) => {
     //Need to somehow paginate this.
     const cursor = db().collection(urlCollection).find();
     const docsArr = await cursor.toArray();
+    //TODO: send a response when docArr length is 0
     res.json(docsArr);
 });
 
