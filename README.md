@@ -12,6 +12,6 @@ defaults are in src/config.ts
 - DB_NAME (default: url_shortener)
 - SHORTURL_COLLECTION (default: shortened_urls)
 - ALLOW_MULTIPLE_SHORTULR_PER_LINK (default: true) 
-- HORTURLID_LENGTH (default: 6)
+- SHORTURLID_LENGTH (default: 6)
 - RETRY_IDGEN_COUNT (default: 3)
 - BANNED_CUSTOMIDS (default: home about info tos contact urls credits credit. Separated with space.)
