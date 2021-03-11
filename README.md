@@ -1,4 +1,4 @@
-# url-shortener
+# CutUrls
 a simple self-hosted URL shortener 
 
 Im new to typescript, using this project to learn more about it.
