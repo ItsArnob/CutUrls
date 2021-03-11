@@ -9,7 +9,7 @@ defaults are in src/config.ts
 
 - PORT  (default: 8080)
 - MONGODB_URI (required)
-- DB_NAME (default: url_shortener)
+- DB_NAME (default: CutUrls)
 - SHORTURL_COLLECTION (default: shortened_urls)
 - ALLOW_MULTIPLE_SHORTULR_PER_LINK (default: true) 
 - SHORTURLID_LENGTH (default: 6)
