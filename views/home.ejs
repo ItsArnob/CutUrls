@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./head.ejs"); %>
+    <title>CutUrls | Home</title>
+    <meta property="og:title" content="CutUrls | Home" />
+    <link rel="stylesheet" id="css" href="/static/css/home/<%- cssHome %>.css">
+</head>
+<body>
+    <div id="container">
+        <%- include("./nav.ejs", {user: "<a id='loginBtn' href='/login'>Log in</a>"}); %>
+        <div id="content">
+            <form id="urlInputForm">
+                <h2 style="margin:0 20px;margin-bottom:50px;font-size:25px;">Enter your long URL and I will cut it short.</h2>
+                <div id="urlInput-Container">
+                    
+                    <input type="text" id="urlInput" placeholder="https://youtu.be/watch?v=dQw4w9WgXcQ">
+
+                    <button id="urlInput-button">
+                        <svg viewBox="0 0 448 448" height="20px">
+                            <g>
+                                <g>
+                                    <polygon points="0.213,32 0,181.333 320,224 0,266.667 0.213,416 448,224"></polygon>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            <noscript>
+                <h1>JavaScript is required for this website to work.</h1>
+                <p>JavaScript is used to send/fetch requests to store/show data.</p>
+            </noscript>
+        </div>
+    </div>
+</body>
+</html>

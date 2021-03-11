@@ -6,7 +6,7 @@
       "ES2020"
     ], /* Specify library files to be included in the compilation. */
     "outDir": "./dist", /* Redirect output structure to the directory. */
-    "rootDir": "./", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "rootDir": "./src", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
 
     "strict": true, /* Enable all strict type-checking options. */
 

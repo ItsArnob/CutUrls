@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box; 
+    font-family: 'poppins', sans-serif; 
+    margin: 0;
+    color: var(--font-color);
+    font-size: 17px;
+}
+
+:root {
+    --bg:#e9eaec;
+    --nav-Top-bg:#f3f3f3;
+    --theme-switch-bg:#363636;
+    --nav-a-hover-color:#2c7fea;
+    --font-color:#545454;
+    --nav-a-underline-color:#bdbdbd;
+    --btn-gradient: linear-gradient(336deg, rgba(44,127,234,1) 0%, rgba(177 67 255) 100%);
+    --urlInput-bg: #f6f9fff9;
+    --urlInput-shadow: rgb(0 0 0 / 5%);
+    --urlInput-focus-shadow:rgb(0 0 0 / 10%);
+}
+@media screen and (min-width:310px) {
+    #loginContainer > #loginBtn {
+        margin-left:10px;
+    }
+}
+
+@media screen and (min-width:340px) {
+    * {
+        font-size:20px;
+    }
+    #nav-Top-Container > #nav-Top {
+        margin:0 10px;
+    }
+
+}
+
+@media screen and (min-width:380px) {
+    #nav-Top > .nav-a {
+        margin-left:15px;
+    
+    }
+    #loginContainer > #loginBtn {
+        margin-left:15px;
+    }
+}
+
+@media screen and (min-width:470px) {
+    #nav-Top > #github {
+        display:block;
+    }
+    #nav-Top-Container > #nav-Top {
+        margin:0 15px;
+    }
+}
+
+@media screen and (min-width:520px) {
+    #nav-Top > #info {
+        display:block;
+    }
+}
+@media screen and (min-width:550px) {
+    #nav-Top > .nav-a {
+        margin-left:20px;
+    
+    }
+    #loginContainer > #loginBtn {
+        margin-left:20px;
+    }
+    #nav-Top-Container > #nav-Top {
+        margin:0 20px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #nav-Top > .nav-a {
+        margin-left:25px;
+    
+    }
+    #loginContainer > #loginBtn {
+        margin-left:25px;
+    }
+    #nav-Top-Container > #nav-Top {
+        margin:0 25px;
+    }
+}
+@media screen and (min-width:650px) {
+    #nav-Top > .nav-a {
+        margin-left:30px;
+    
+    }
+    #loginContainer > #loginBtn {
+        margin-left:30px;
+    }
+    #nav-Top-Container > #nav-Top {
+        margin:0 30px;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background: var(--bg);
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+}
+
+#nav-Top-Container {
+    background: var(--nav-Top-bg);
+    height: 60px;
+}
+#nav-Top {
+    display:flex;
+    align-items:center;
+    height:100%;
+    margin:0 7px;
+}
+
+#nav-Top > :last-child {
+    margin-left: auto;
+}
+
+.nav-a {
+    text-decoration-line: none;
+    margin-left:10px;
+    transition:0.3s;
+}
+.nav-a:hover {
+    color: var(--nav-a-hover-color);
+    box-shadow: 0 1px 0px 0px var(--nav-a-underline-color);
+
+}
+#loginContainer {
+    display:flex;
+}
+
+.app-name > strong, .app-name{
+    text-decoration-line: none;
+    font-size:1.2rem;
+}
+
+#github, #info {
+    display:none;
+}
+
+#loginBtn {
+    color:white;
+    text-decoration:none;
+    margin-left:7px;
+    padding:3px 10px;
+    border-radius:10px 10px;
+    transition: background 1s ease-out;
+    background: var(--btn-gradient);
+    transition:0.3s;
+}
+
+#loginBtn:hover {
+    box-shadow: rgb(44 127 234 / 52%) 0 0 10px 1px;
+    transform: translateY(-1px);
+}
+
+/*switch*/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin: auto;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    transition: 0.4s;
+    background: rgb(44,127,234) url('/static/images/sun.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked + .slider {
+  background-color: var(--theme-switch-bg);
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+  background: rgb(138 31 182) url('/static/images/moon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

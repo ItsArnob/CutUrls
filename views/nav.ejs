@@ -1,0 +1,51 @@
+<nav id="nav-Top-Container">
+    <span id="nav-Top">
+        <a href="/" class="app-name"><strong>CutUrls</strong></a>
+        <a class="nav-a" id="info" href="/info">Info</a>
+        <a class="nav-a" id="github" href="https://github.com/itsarnob/url-shortener" target="_">GitHub</a>
+        <a class="nav-a" id="report" href="/report">Report</a>
+        <span id="loginContainer">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="changeTheme()" id="slider" <%- themeChecked %>>
+                <span class="slider round"></span>
+            </label>
+            <%- user %>
+        </span>
+    </span>
+</nav>
+    <script>
+        const changeTheme = () => {
+            const isChecked = document.getElementById("slider").checked;
+            if (isChecked) {
+                document.body.style = `
+                    --bg:#252321;
+                    --nav-Top-bg:#191919;
+                    --theme-switch-bg:#363636;
+                    --nav-a-hover-color:#5cd705;
+                    --font-color:#b3b3b3;
+                    --nav-a-underline-color:#868686;
+                    --btn-gradient: linear-gradient(336deg, rgba(78,188,0,1) 0%, rgba(44,127,234,1) 100%);
+                    --urlInput-bg: #413f3e;
+                    --urlInput-shadow: rgb(0 0 0 / 5%);
+                    --urlInput-focus-shadow:rgb(0 0 0 / 10%);
+                    
+                    `
+                document.cookie = "theme=dark;";
+            } else {
+                document.body.style = `
+                    --bg:#e9eaec;
+                    --nav-Top-bg:#f3f3f3;
+                    --theme-switch-bg:#363636;
+                    --nav-a-hover-color:#2c7fea;
+                    --font-color:#545454;
+                    --nav-a-underline-color:#bdbdbd;
+                    --btn-gradient: linear-gradient(336deg, rgba(44,127,234,1) 0%, rgba(177 67 255) 100%);
+                    --urlInput-bg: #f6f9fff9;
+                    --urlInput-shadow: rgb(0 0 0 / 5%);
+                    s--urlInput-focus-shadow:rgb(0 0 0 / 10%);
+                    `
+
+                document.cookie = "theme=light;";
+            }
+        }
+    </script>

@@ -1,21 +1,13 @@
 /*
  Yes i wasted some seconds organizing the imports.
 */
-import { urlCollection, multiShortURLPerLink, retryIdGen, shortUrlIdLength, bannedIds } from "../../config";
+import { urlCollection, multiShortURLPerLink, retryIdGen, shortUrlIdLength, bannedIds } from "../config";
 import { Router, Response } from "express";
 import validator from "validator";
 import { nanoid } from "nanoid/async";
 import { db } from "../database/mongo";
 
 const router = Router();
-
-router.get("/allurls", async (req, res) => {
-    //Need to somehow paginate this.
-    const cursor = db().collection(urlCollection).find();
-    const docsArr = await cursor.toArray();
-    //TODO: send a response when docArr length is 0
-    res.json(docsArr);
-});
 
 router.get("/info/:id", async (req, res) => {
     const shortUrlId = req.params.id;
@@ -43,8 +35,8 @@ router.post("/create", async (req, res) => {
     };
 
     if (!data.redirectURL) return res.status(400).json({ message: "NO_URL" });
-    if (!validator.isURL(data.redirectURL, { protocols: ["https", "http"] })) return res.status(400).json({ message: "INVALID_URL" });
-    if (!validator.isURL(data.redirectURL, { require_protocol: true, protocols: ["https", "http"] })) return res.status(400).json({ message: "NO_PROTOCOL" });
+    if (!validator.isURL(data.redirectURL /*, { protocols: ["https", "http"] }*/)) return res.status(400).json({ message: "INVALID_URL" });
+    //if (!validator.isURL(data.redirectURL, { require_protocol: true, protocols: ["https", "http"] })) return res.status(400).json({ message: "NO_PROTOCOL" });
     if (multiShortURLPerLink) {
         storeURL(true, data, res);
     }
