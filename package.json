@@ -1,5 +1,5 @@
 {
-  "name": "url-shortener",
+  "name": "CutUrls",
   "version": "0.0.1",
   "description": "A simple URL shortener.",
   "main": "dist/index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ItsArnob/url-shortener.git"
+    "url": "git+https://github.com/ItsArnob/CutUrls.git"
   },
   "keywords": [
     "url-shortener",
@@ -22,9 +22,9 @@
   "author": "ItsArnob",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ItsArnob/url-shortener/issues"
+    "url": "https://github.com/ItsArnob/CutUrls/issues"
   },
-  "homepage": "https://github.com/ItsArnob/url-shortener#readme",
+  "homepage": "https://github.com/ItsArnob/CutUrls#readme",
   "devDependencies": {
     "@types/cookie-parser": "^1.4.2",
     "@types/express": "^4.17.11",
