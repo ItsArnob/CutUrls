@@ -17,6 +17,12 @@
     --urlInput-bg: #f6f9fff9;
     --urlInput-shadow: rgb(0 0 0 / 5%);
     --urlInput-focus-shadow:rgb(0 0 0 / 10%);
+    --more-options-btn-clr: #a7a9ad;
+    --more-options-btn-hover-clr: #64676d;
+    --tooltip-bg:#d1d3d6;
+    --tooltip-color:#2e2e2f;
+    --input-blocked-bg: #d7dade;
+    --input-blocked-txt-clr: #4b4b4b;
 }
 @media screen and (min-width:310px) {
     #loginContainer > #loginBtn {
@@ -27,6 +33,10 @@
 @media screen and (min-width:340px) {
     * {
         font-size:20px;
+    }
+    #more-options svg {
+        width: 15px;
+        height: 15px;
     }
     #nav-Top-Container > #nav-Top {
         margin:0 10px;
@@ -54,7 +64,7 @@
 }
 
 @media screen and (min-width:520px) {
-    #nav-Top > #info {
+    #nav-Top > #about {
         display:block;
     }
 }
@@ -140,7 +150,7 @@ body {
     font-size:1.2rem;
 }
 
-#github, #info {
+#github, #about {
     display:none;
 }
 

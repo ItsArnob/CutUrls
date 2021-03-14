@@ -15,8 +15,14 @@
     --nav-a-underline-color:#868686;
     --btn-gradient: linear-gradient(336deg, rgba(78,188,0,1) 0%, rgba(44,127,234,1) 100%);
     --urlInput-bg: #413f3e;
-    --urlInput-shadow: rgb(0 0 0 / 5%);
-    --urlInput-focus-shadow:rgb(0 0 0 / 10%);
+    --urlInput-shadow: rgb(0 0 0 / 20%);
+    --urlInput-focus-shadow:rgb(0 0 0 / 32%);
+    --more-options-btn-clr: #625e5a;
+    --more-options-btn-hover-clr: #94908c;
+    --tooltip-bg:#171514;
+    --tooltip-color:#bdb6b3;
+    --input-blocked-bg: #2b2a29;
+    --input-blocked-txt-clr: #a1a1a1;
 }
 
 @media screen and (min-width:310px) {
@@ -28,6 +34,10 @@
 @media screen and (min-width:340px) {
     * {
         font-size:20px;
+    }
+    #more-options svg {
+        width: 15px;
+        height: 15px;
     }
     #nav-Top-Container > #nav-Top {
         margin:0 10px;
@@ -55,7 +65,7 @@
 }
 
 @media screen and (min-width:520px) {
-    #nav-Top > #info {
+    #nav-Top > #about {
         display:block;
     }
 }
@@ -141,7 +151,7 @@ body {
     font-size:1.2rem;
 }
 
-#github, #info {
+#github, #about {
     display:none;
 }
 
