@@ -111,12 +111,16 @@
             if (document.querySelector("#more-options-btn > svg").style.transform == "rotate(180deg)") {
                 document.querySelector("#more-options-btn > svg").style.transform = "rotate(0deg)";
                 document.getElementById("more-options").style.height =  '0';
+                document.getElementById("more-options").style.overflow = "hidden";
                 mediaQueryMatch.removeEventListener("change", changeHeight);
             }
             else {
                 changeHeight(mediaQueryMatch);
                 mediaQueryMatch.addEventListener("change", changeHeight);
                 document.querySelector("#more-options-btn > svg").style.transform = "rotate(180deg)";
+                setTimeout(() => {
+                    document.getElementById("more-options").style.overflow = "visible";
+                }, 300);
             }
 
         }
