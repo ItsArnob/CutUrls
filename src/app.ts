@@ -1,5 +1,5 @@
 import path from "path";
-import { port } from "./config";
+import { port, hostname } from "./config";
 import router from "./router/routes";
 import express from "express";
 import morgan from "morgan";
@@ -29,5 +29,5 @@ export default (): void => {
     app.use("/static",express.static(path.join(__dirname, "..", "public")));
     app.use(router);
 
-    app.listen(port, () => console.log(`Server listening on port ${port}`));
+    app.listen(port, hostname, () => console.log(`Server listening on port ${port}`));
 };

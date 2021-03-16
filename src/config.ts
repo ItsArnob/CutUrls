@@ -1,4 +1,5 @@
-export const port = process.env.PORT ?? 8080;
+export const port = process.env.PORT ? parseInt(process.env.PORT) : 8080;
+export const hostname = process.env.HOSTNAME ?? "";
 export const mongodbUri = process.env.MONGODB_URI ?? "";
 export const dbName = process.env.DB_NAME ?? "CutUrls";
 export const urlCollection = process.env.SHORTURL_COLLECTION ?? "shortened_urls";
