@@ -11,7 +11,7 @@
         <%- include("./nav.ejs", {user: "<a id='loginBtn' href='/login'>Log in</a>"}); %>
         <div id="content">
             <form id="urlInputForm">
-                <h2 style="margin:0 20px;margin-bottom:50px;font-size:25px;">Enter your long URL and I will cut it short.(WIP. Nothing works yet)</h2>
+                <h2 style="margin:0 20px;margin-bottom:50px;font-size:25px;">Enter your long URL and I will cut it short. (WIP. Nothing works yet)</h2>
                 <div id="urlInput-Container">
                     
                     <input type="text" id="urlInput" placeholder="https://youtu.be/d0tGBCCE0lc">
@@ -95,9 +95,18 @@
                 <h1>JavaScript is required for this website to work.</h1>
                 <p>JavaScript is used to send/fetch requests to store/show data.</p>
             </noscript>
-            <div id="features-container">
-                
+            <div style="margin-top:15vh;">
+                <p style="margin-bottom: 40px;"><strong style="font-size:30px;">Features</strong></p>
+                <div id="features-container">
+                    <div class="card"><p>{ API }</p>Easily create, update, delete and see details of your links with the provided API.</div>
+                    <div class="card"><p>OSS</p>This web application is fully open sourced under the MIT licence.</div>
+                    <div class="card"><p>Notification system</p>Get notification about reported links, messages from the admin & more.</div>
+                    <div class="card"><p>Administration</p>Ban a user account, delete links of other users, send message to a user, announce something to all users & more.</div>
+                    <div class="card"><p>Report links</p>Found a malicious url shortened from here? Easily report them to the admin via the report option.</div>
+                </div>
+                <h3 style="margin-top:40px; margin-bottom:50px;">Want to install CutUrls on your server? Here's the <a id="installGuide-a" href="/docs#install">installation guide.</a> Its really easy to setup!</h3>
             </div>
+        <%- include("./footer.ejs"); %>
         </div>
     </div>
     <script>
@@ -107,7 +116,7 @@
                 console.log("matched")
                 document.getElementById("more-options").style.height = "245px";
             }
-            else document.getElementById("more-options").style.height = "360px";
+            else document.getElementById("more-options").style.height = "409px";
         }
         const moreOptions = () => {
             if (document.querySelector("#more-options-btn > svg").style.transform == "rotate(180deg)") {

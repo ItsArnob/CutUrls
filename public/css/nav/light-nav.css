@@ -23,6 +23,8 @@
     --tooltip-color:#2e2e2f;
     --input-blocked-bg: #d7dade;
     --input-blocked-txt-clr: #4b4b4b;
+    --installGuide-a-clr:#2a2a2a;
+    --installGuide-a-hover-clr:black;
 }
 @media screen and (min-width:310px) {
     #loginContainer > #loginBtn {
@@ -169,7 +171,43 @@ body {
     box-shadow: rgb(44 127 234 / 52%) 0 0 10px 1px;
     transform: translateY(-1px);
 }
+footer {  
+    background-color: black;
+    margin-top:auto;
+    display:flex;
+    padding:10px;
+    justify-content:space-around;
+}
+footer div  {
 
+    display:flex;
+    flex-direction:column;
+    align-items:end;
+    text-align:left;
+}
+.footer-a {
+    text-decoration-line: none;
+    transition:0.3s;
+    font-size:15px;
+    color: white;
+    margin-bottom:5px;
+}
+.footer-a:hover {
+    color: #5cd705;
+    box-shadow: 0 1px 0px 0px #5c5c5c;
+}
+#signupBtn {
+    border-radius:5px;
+    padding:3px 10px;
+    transition: background 1s ease-out;
+    background: var(--btn-gradient);
+    transition:0.3s;
+}
+#signupBtn:hover {
+    color:white;
+    box-shadow: rgb(44 127 234 / 52%) 0 0 10px 1px;
+    transform: translateY(-1px);
+}
 /*switch*/
 
 .switch {
