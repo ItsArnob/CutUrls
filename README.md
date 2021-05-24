@@ -5,6 +5,8 @@ Im new to typescript, using this project to learn more about it.
 
 This project's UI is inspired by [https://kutt.it](https://kutt.it).
 
+NOTE: I can't work on this project for the time being 'cause my laptop "died"
+
 # Environment variables
 
 defaults are in src/config.ts
@@ -19,6 +21,8 @@ defaults are in src/config.ts
 - RETRY_IDGEN_COUNT (default: 3)
 - BANNED_CUSTOMIDS (default: home about info tos contact urls credits credit. Separated with space.)
 - WAIT_BEFORE_REDIRECT (default: 5. Gives the user "Redirecting to example.com in 5 seconds". If 0 is provided then users directly get redirected.)
+
+
 
 # Credits
  The icons used in this project are from [https://www.flaticon.com/](https://www.flaticon.com/).
